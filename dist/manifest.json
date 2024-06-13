@@ -1,0 +1,46 @@
+{
+  "name": "Extension App",
+  "description": "",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open Extension App"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content_script.tsx-loader-b73e578c.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "background",
+    "contextMenus",
+    "bookmarks",
+    "tabs",
+    "storage",
+    "history"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/client-1cc69491.js",
+        "assets/Button-1280a7ff.js",
+        "assets/content_script.tsx-a99e7d34.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
